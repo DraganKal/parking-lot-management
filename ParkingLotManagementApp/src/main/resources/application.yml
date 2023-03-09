@@ -1,0 +1,14 @@
+spring:
+  data:
+    elasticsearch:
+      cluster-name: hsc-elastic
+      cluster-nodes: localhost:9300
+      repositories:
+        enabled: true
+      properties:
+        path:
+          logs: target/elasticsearch/logs
+          data: target/elasticsearch/data
+server:
+  error:
+    include-message: always
