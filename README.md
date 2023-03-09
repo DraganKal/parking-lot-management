@@ -10,23 +10,33 @@ Prerequisites:
   - Elasticsearch 7.0 or higher
 
 Installation:
-  - First you need to run Elasticsearch 7.0 or higher
-  - Next you need to set cluster-name and cluster-nodes in application.yml
-  - You can run this project from IntelliJ (Run ParkingLotManagementApp). You need to use Java 11 sdk
-  - You can also run this project from console:
-    - navigate to folder with pom.xml and src folder
-    - run command: mvn spring-boot:run
+  - First, you need to run Elasticsearch 7.0 or higher.
+  - Next, you need to set the cluster-name and cluster-nodes in the application.yml file.
+  - You can run this project from IntelliJ (run ParkingLotManagementApp). You need to use Java 11 SDK.
+  - You can also run this project from the console:
+    - Navigate to the folder with the pom.xml file and src folder (ParkingLotManagementApp). 
+    - Run the command: mvn spring-boot:run
     
 Usage:
-  - We provided PARKING-LOT.postman_collection.json file so you can import that file in Postman
+  - We have provided the PARKING-LOT.postman_collection.json file in the postman-collections folder so you can import file in Postman
   - You have two requests:
     - GET The nearest parking
     - GET Parking score
-  - You can also run provided curl calls through terminal
+  - You can also run the provided curl calls through the terminal.
     
 Api Endpoints:
   - GET /parking-lot/nearest-parking : Returns the closest parking lot to the specified latitude and longitude.
-  - GET /parking-lot/parking-score : Returns the parking score for the specified latitude and longitude.
+    - Request params: 
+      - latitude: decimal number from -90 to 90 (degrees)
+      - longitude: decimal number from -180 to 180 (degrees)
+  - GET /parking-lot/parking-score : Returns the parking score for the specified latitude and longitude in degrees.
+    - Request params: 
+      - latitude: decimal number from -90 to 90 (degrees)
+      - longitude: decimal number from -180 to 180 (degrees)
+  
+Curl calls:
+  - curl http://localhost:8080/parking-lot/nearest-parking?latitude=33.7437729&longitude=-118.3812524
+  - curl http://localhost:8080/parking-lot/parking-score?latitude=33.7437729&longitude=-118.3812524
   
 Postman Collections (postman-collections folder):
   - PARKING-LOT.postman_collection.json
