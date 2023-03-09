@@ -1,0 +1,69 @@
+{
+	"info": {
+		"_postman_id": "3f3f0ddd-3cb4-4bfc-acbe-c918b3edd54f",
+		"name": "PARKING LOT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "The nearest parking",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/parking-lot/nearest-parking?latitude=33.7437729&longitude=-118.3812524",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"parking-lot",
+						"nearest-parking"
+					],
+					"query": [
+						{
+							"key": "latitude",
+							"value": "33.7437729"
+						},
+						{
+							"key": "longitude",
+							"value": "-118.3812524"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Parking score",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/parking-lot/parking-score?latitude=33.7437729&longitude=-118.3812524",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"parking-lot",
+						"parking-score"
+					],
+					"query": [
+						{
+							"key": "latitude",
+							"value": "33.7437729"
+						},
+						{
+							"key": "longitude",
+							"value": "-118.3812524"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
